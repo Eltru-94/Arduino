@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Node Arduino</title>
+</head>
+<body>
+<h1 class="text-center">Node js  socket  with Arduino</h1>
+<canvas id="graficos">
+	
+</canvas>
+<script src="/socket.io/socket.io.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" charset="utf-8"></script>
+<script >
+	const socket=io();
+	let contador=0;
+	socket.on('temp',function (dataSerial){
+	/*	myChart.data.labels.push(contador);
+		myChart.data.datasets.forEach(dataset=>{
+			dataset.data.push(dataSerial.value);
+		});
+		contador++;
+		myChart.update();
+		*/
+		let temp=document.getElementById('temperatura');
+		temp.innerHTML= `${data}`;
+	});
+/*
+	var ctx = document.getElementById('graficos').getContext('2d');
+	var myChart = new Chart(ctx, {
+	    type: 'line',
+	    data: {
+	        labels: ['Datos Fotocelda'],
+	        datasets: [{
+	        	label: "Serial",
+	        	backgroundColor:'rgba(11, 12, 132, 0.2)',
+	        	borderColor: 'rgba(41,128,185,0.2)',
+	        	data:[socket]
+	        }]
+	    },
+	    options: {
+	        
+	    }
+	});
+	*/
+</script>
+<div class="container">
+	<div class="row justify-content-center align-self-center">
+		<div class="card"> 
+			<h1 id="temperatura" class="display-1 p-4"> </h1>
+		</div>
+
+	</div>
+</div>
+</body>
+</html>

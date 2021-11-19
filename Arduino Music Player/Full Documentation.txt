@@ -1,0 +1,10 @@
+Earn 5 Free PCBs of this Music Player based on Arduino through the
+coupon: JLC-REBE
+
+You can access the JLCPCB Website, create your account and earn 5 PCB units
+of this project now.
+
+www.jlcpcb.com
+
+Acess the full documentation with manual, firmware and other informations.
+https://github.com/wagiminator/ATtiny85-TinyDFPlayer
